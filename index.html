@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Corner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <section class="py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        My Projects
+      </h2>
+
+      <!-- Tabs -->
+      <div class="flex justify-center mb-10 gap-4">
+        <button class="tab-button px-4 py-2 rounded-full bg-purple-600 bg-gray-700 " onclick="showTab('cv', event)">Computer Vision & Python</button>
+        <button class="tab-button px-4 py-2 rounded-full bg-gray-700" onclick="showTab('ai', event)">Gen AI</button>
+        <button class="tab-button px-4 py-2 rounded-full bg-gray-700" onclick="showTab('web', event)">Web Development</button>
+         <button class="tab-button px-4 py-2 rounded-full bg-gray-700" onclick="showTab('data', event)">Data Analytics</button>
+      </div>
+
+      <!-- Computer Vision Projects -->
+      <div id="cv-projects" class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-xl transition-shadow">
+          <img src="Images/P1.png" class="w-full h-50 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">AI-Based Smart Gate System</h3>
+            <p class="text-gray-300 text-sm mb-4">Real-time number plate detection using YOLO, EasyOCR & OpenCV.</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('cv', 0)">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-xl transition-shadow">
+          <img src="Images/P2.png" class="w-full h-50 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Face Age and Gender Prediction Using OpenCV DNN</h3>
+            <p class="text-gray-300 text-sm mb-4">Age and gender detection using OpenCV’s deep learning module with pre-trained models.</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('cv', 1)">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-xl transition-shadow">
+          <img src="Images/P3.png" class="w-full h-50 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Face Detection</h3>
+            <p class="text-gray-300 text-sm mb-4">Real-time face detection using webcam and Haar Cascades with OpenCV.</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('cv', 2)">
+              View Details
+            </button>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Gen AI Projects -->
+      <div id="ai-projects" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="Images/P4.png" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Multi-PDF Chat Assistant</h3>
+            <p class="text-gray-300 text-sm mb-4">Real-time PDF question answering using HuggingFace, LangChain & FAISS.</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('ai', 0)">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+       <!-- Web Development -->
+      <div id="web-projects" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="Images/qc.png" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">QuickCheck</h3>
+            <p class="text-gray-300 text-sm mb-4">Smart vehicle data management system using QR codes with real-time access for RTO, insurance, emission, and traffic records..</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('web', 0)">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      
+       <!-- Data Analytics -->
+      <div id="data-projects" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="Images/P5.png" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Health Data Analytics</h3>
+            <p class="text-gray-300 text-sm mb-4">OCD Patient Data Analysis using SQL, Excel & Power BI for insight into diagnosis trends and behavior patterns.</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('data', 0)">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+    <div class="bg-gray-800 rounded-lg max-w-lg w-full p-6 relative">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-300 hover:text-white">&times;</button>
+      <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
+      <div id="modal-content" class="text-gray-300 text-sm space-y-4"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const projectData = {
+      cv: [
+        {
+          title: "AI-Based Smart Gate System",
+          description: "Real-time object detection using YOLO and OpenCV.",
+          details: "Smart gate that uses YOLO for license plate detection and EasyOCR for number recognition. Captures CCTV feeds, logs data into MySQL, and manages secure gate access.",
+          tech: ["Python", "OpenCV", "YOLO", "EasyOCR", "Flask", "HTML", "JS", "Bootstrap"]
+        },
+        {
+          title: "Face Age and Gender Prediction Using OpenCV DNN",
+          description: "Face recognition with emotion and age prediction.",
+          details: "This project uses OpenCV's deep learning module to detect faces and predict age and gender from images. It loads pre-trained Caffe models to classify age groups and gender, then visualizes the results with bounding boxes and labels using matplotlib.",
+          tech: ["Python","OpenCV","Caffe (Pre-trained models)","Matplotlib","NumPy"]
+        },
+         {
+          title: "Face Detection",
+          details: "Real-time face detection using webcam and OpenCV’s Haar Cascade. Detects faces in each video frame and displays bounding boxes for visual feedback.",
+          tech: ["Python","OpenCV (Haar Cascade Classifier)","Webcam (for real-time video input)"]
+        }
+      ],
+      ai: [
+        {
+          title: "Multi-PDF Chat Assistant",
+          details: "This project is a Streamlit-based web app that lets users chat with the content of multiple PDF documents. It extracts text from uploaded PDFs, breaks it into chunks, embeds the chunks using HuggingFace embeddings, stores them in a FAISS vector database, and uses a conversational AI model to answer user questions based on the document content. It enables a natural, interactive way to explore and understand large documents quickly.",
+          tech: ["PyPDF2", "LangChain", "FAISS", "HuggingFace Embeddings", "HuggingFace LLM","Streamlit","Custom HTML/CSS","python-dotenv"]
+        },
+        {
+          title: "Content Generator",
+          description: "Auto-generates posts and marketing content.",
+          details: "Creates diverse social media and campaign material using multiple AI models. Supports scheduling and personalization.",
+          tech: ["Python", "Transformers", "React", "Node.js", "PostgreSQL"]
+        }
+      ],
+
+     web: [
+        {
+          title: "QuickCheck",
+          details: "QuickCheck is a web-based vehicle management system that uses QR codes to store and access details like insurance, emission tests, and traffic fines. It connects RTOs, insurance companies, emission centers, traffic police, and vehicle owners through a centralized portal. Each vehicle gets a unique QR code card that can be scanned to instantly view or update its records. The system allows RTOs to register vehicles and manage data, insurance companies to update policy info, emission centers to log test results, traffic police to issue fines, and owners to track and manage their vehicle status—all in one place. Built with PHP, MySQL, and web technologies, it reduces manual work, improves transparency, and keeps all vehicle records up to date.",
+          tech: ["HTML", "CSS", "JavaScript", "PHP", "Apache Server","MySQL"]
+        }
+      ],
+
+      data: [
+        {
+          title: "Health Data Analytica",
+          details: "Analyzed OCD patient data using SQL for querying and cleaning, Excel for initial data exploration and preprocessing, and Power BI for creating interactive dashboards. Uncovered key trends in gender, ethnicity, diagnosis patterns, and common obsession/compulsion types, providing healthcare teams with actionable insights through clear visual storytelling and data-driven reports.",
+          tech: ["MS Excel", "PowerBI","SQL"]
+        },
+        {
+          title: "Content Generator",
+          description: "Auto-generates posts and marketing content.",
+          details: "Creates diverse social media and campaign material using multiple AI models. Supports scheduling and personalization.",
+          tech: ["Python", "Transformers", "React", "Node.js", "PostgreSQL"]
+        }
+      ]
+
+    };
+
+    function showTab(tab, event) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
+      document.getElementById(tab + '-projects').classList.remove('hidden');
+
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('bg-purple-600'));
+      event.target.classList.add('bg-purple-600');
+    }
+
+    function showProjectDetails(tab, index) {
+      const project = projectData[tab][index];
+      document.getElementById('modal-title').textContent = project.title;
+
+      const techList = project.tech.map(t => `<span class="bg-purple-600 px-3 py-1 rounded-full text-xs">${t}</span>`).join(' ');
+
+      document.getElementById('modal-content').innerHTML = `
+        <p>${project.details}</p>
+        <div><strong>Technologies Used:</strong></div>
+        <div class="flex flex-wrap gap-2">${techList}</div>
+      `;
+
+      document.getElementById('project-modal').classList.remove('hidden');
+      document.getElementById('project-modal').classList.add('flex');
+    }
+
+    function closeModal() {
+      document.getElementById('project-modal').classList.add('hidden');
+      document.getElementById('project-modal').classList.remove('flex');
+    }
+  </script>
+
+</body>
+</html>
