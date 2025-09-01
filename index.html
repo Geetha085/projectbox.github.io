@@ -8,7 +8,6 @@
 </head>
 <body class="bg-gray-900 text-white">
 
-
   <section class="py-20 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -17,167 +16,124 @@
 
       <!-- Tabs -->
       <div class="flex justify-center mb-10 gap-4">
-        <button class="tab-button px-4 py-2 rounded-full bg-purple-600 bg-gray-700 " onclick="showTab('cv', event)">Computer Vision & Python</button>
+        <button class="tab-button px-4 py-2 rounded-full bg-purple-600" onclick="showTab('cv', event)">Computer Vision & Python</button>
         <button class="tab-button px-4 py-2 rounded-full bg-gray-700" onclick="showTab('ai', event)">AI</button>
         <button class="tab-button px-4 py-2 rounded-full bg-gray-700" onclick="showTab('web', event)">Web Development</button>
-         <button class="tab-button px-4 py-2 rounded-full bg-gray-700" onclick="showTab('data', event)">Data Analytics</button>
+        <button class="tab-button px-4 py-2 rounded-full bg-gray-700" onclick="showTab('data', event)">Data Analytics</button>
       </div>
 
       <!-- Computer Vision Projects -->
       <div id="cv-projects" class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-xl transition-shadow">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition relative group">
           <img src="Images/P1.png" class="w-full h-50 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">AI-Based Smart Gate System</h3>
             <p class="text-gray-300 text-sm mb-4">Real-time number plate detection using YOLO, EasyOCR & OpenCV.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('cv', 0)">
-              View Details
-            </button>
           </div>
+          <button onclick="showProjectDetails('cv', 0)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-xl transition-shadow">
+
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition relative group">
           <img src="Images/P2.png" class="w-full h-50 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Face Age and Gender Prediction Using OpenCV DNN</h3>
             <p class="text-gray-300 text-sm mb-4">Age and gender detection using OpenCV’s deep learning module with pre-trained models.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('cv', 1)">
-              View Details
-            </button>
           </div>
+          <button onclick="showProjectDetails('cv', 1)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-xl transition-shadow">
+
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition relative group">
           <img src="Images/P3.png" class="w-full h-50 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Face Detection</h3>
             <p class="text-gray-300 text-sm mb-4">Real-time face detection using webcam and Haar Cascades with OpenCV.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('cv', 2)">
-              View Details
-            </button>
           </div>
+          <button onclick="showProjectDetails('cv', 2)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
-        
       </div>
 
-      <!-- Gen AI Projects -->
+      <!-- AI Projects -->
       <div id="ai-projects" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-         <img src="Images/P4.png" class="w-full h-48 object-cover">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition relative group">
+          <img src="Images/P4.png" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Motivation Generator</h3>
-            <p class="text-gray-300 text-sm mb-4">A Streamlit app that displays category-based motivational quotes using JSON datasets.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('ai', 0)">
-              View Details
-            </button>
+            <p class="text-gray-300 text-sm mb-4">Streamlit app that displays category-based motivational quotes using JSON datasets.</p>
           </div>
+          <button onclick="showProjectDetails('ai', 0)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
 
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-         <img src="Images/SA.png" class="w-full h-48 object-cover">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition relative group">
+          <img src="Images/SA.png" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Amazon Review Sentiment Analysis</h3>
             <p class="text-gray-300 text-sm mb-4">Streamlit app analyzes Amazon reviews, classifying them Positive or Negative.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('ai', 1)">
-              View Details
-            </button>
           </div>
+          <button onclick="showProjectDetails('ai', 1)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
 
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-         <img src="Images/VA.png" class="w-full h-48 object-cover">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition relative group">
+          <img src="Images/VA.png" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Voice Virtual Assistant with ElevenLabs</h3>
             <p class="text-gray-300 text-sm mb-4">Python voice assistant using ElevenLabs listens, understands, and responds naturally.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('ai', 2)">
-              View Details
-            </button>
           </div>
+          <button onclick="showProjectDetails('ai', 2)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
-        
       </div>
 
-       <!-- Web Development -->
+      <!-- Web Development -->
       <div id="web-projects" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition relative group">
           <img src="Images/qc.png" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">QuickCheck</h3>
-            <p class="text-gray-300 text-sm mb-4">Smart vehicle data management system using QR codes with real-time access for RTO, insurance, emission, and traffic records..</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('web', 0)">
-              View Details
-            </button>
+            <p class="text-gray-300 text-sm mb-4">Smart vehicle data management system using QR codes with real-time access for RTO, insurance, emission, and traffic records.</p>
           </div>
+          <button onclick="showProjectDetails('web', 0)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
       </div>
-      
-       <!-- Data Analytics -->
+
+      <!-- Data Analytics -->
       <div id="data-projects" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition relative group">
           <img src="Images/P5.png" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Health Data Analytics</h3>
-            <p class="text-gray-300 text-sm mb-4">OCD Patient Data Analysis using SQL, Excel & Power BI for insight into diagnosis trends and behavior patterns.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('data', 0)">
-              View Details
-            </button>
+            <p class="text-gray-300 text-sm mb-4">OCD Patient Data Analysis using SQL, Excel & Power BI.</p>
           </div>
+          <button onclick="showProjectDetails('data', 0)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
-     
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition relative group">
           <img src="Images/P6.png" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Retail Sales Analysis</h3>
-            <p class="text-gray-300 text-sm mb-4">Analyzed retail sales data using SQL to clean, explore, and uncover insights on customer behavior, top categories, and sales trends.</p>
-            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
-              onclick="showProjectDetails('data', 1)">
-              View Details
-            </button>
+            <p class="text-gray-300 text-sm mb-4">SQL-based project analyzing customer behavior, sales trends, and top categories.</p>
           </div>
+          <button onclick="showProjectDetails('data', 1)" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            View Details
+          </button>
         </div>
       </div>
-  
+    </div>
   </section>
-
-  <!-- Resume Section -->
-<!-- <section class="py-10 bg-gray-900 text-center">
-  <a href="Images/Geethashree.pdf" download class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 rounded-full text-white text-sm font-semibold hover:opacity-90 transition">
-    Download Resume
-  </a>
-</section> -->
-
-  <!-- Contact Section -->
-<!-- <section class="py-16 bg-gray-800 text-white">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-      Get in Touch
-    </h2>
-    <form class="grid gap-6">
-      <div>
-        <label class="block mb-1 text-sm text-gray-300">Name</label>
-        <input type="text" placeholder="Your name" class="w-full px-4 py-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white">
-      </div>
-      <div>
-        <label class="block mb-1 text-sm text-gray-300">Email</label>
-        <input type="email" placeholder="you@example.com" class="w-full px-4 py-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white">
-      </div>
-      <div>
-        <label class="block mb-1 text-sm text-gray-300">Message</label>
-        <textarea placeholder="Write your message..." rows="5" class="w-full px-4 py-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"></textarea>
-      </div>
-      <button type="submit" class="bg-purple-600 px-6 py-2 rounded-full hover:bg-purple-500 transition w-max mx-auto">
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
- -->
 
   <!-- Modal -->
   <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
@@ -194,68 +150,63 @@
       cv: [
         {
           title: "AI-Based Smart Gate System",
-          description: "Real-time object detection using YOLO and OpenCV.",
-          details: "Smart gate that uses YOLO for license plate detection and EasyOCR for number recognition. Captures CCTV feeds, logs data into MySQL, and manages secure gate access.",
+          details: "Smart gate with YOLO for license plate detection and EasyOCR for recognition. Logs data into MySQL for secure access.",
           tech: ["Python", "OpenCV", "YOLO", "EasyOCR", "Flask", "HTML", "JS", "Bootstrap"]
         },
         {
           title: "Face Age and Gender Prediction Using OpenCV DNN",
-          description: "Face recognition with emotion and age prediction.",
-          details: "This project uses OpenCV's deep learning module to detect faces and predict age and gender from images. It loads pre-trained Caffe models to classify age groups and gender, then visualizes the results with bounding boxes and labels using matplotlib.",
-          tech: ["Python","OpenCV","Caffe (Pre-trained models)","Matplotlib","NumPy"],
+          details: "Predicts age and gender using OpenCV’s DNN and pre-trained Caffe models with bounding box visualizations.",
+          tech: ["Python","OpenCV","Caffe Models","Matplotlib","NumPy"],
           demo: "https://huggingface.co/spaces/geetha07-shree/age-gender-detector"
         },
-         {
+        {
           title: "Face Detection",
-          details: "Real-time face detection using webcam and OpenCV’s Haar Cascade. Detects faces in each video frame and displays bounding boxes for visual feedback.",
-          tech: ["Python","OpenCV (Haar Cascade Classifier)","Webcam (for real-time video input)"],
+          details: "Real-time face detection with webcam input and Haar Cascade Classifier in OpenCV.",
+          tech: ["Python","OpenCV","Webcam"],
           github: "https://github.com/Geetha085/CV_Python_Projects/tree/main/FaceDetection"
         }
       ],
       ai: [
         {
           title: "Motivation Generator",
-          details: "Motivation Generator is a simple Streamlit web app that delivers motivational quotes to inspire users every day. It allows users to choose from categories like career, fitness, study, and mental health, or get a random surprise quote. The app reads from a curated dataset of motivational quotes and displays one instantly with a clean, interactive interface.",
-          tech: ["Python", "Streamlit", "JSON", "Random", "Custom HTML/CSS"],
+          details: "Streamlit app showing motivational quotes from JSON datasets, with category and random selection.",
+          tech: ["Python", "Streamlit", "JSON", "HTML/CSS"],
           demo: "https://huggingface.co/spaces/geetha07-shree/Motivation-Generator"
         },
         {
           title: "Amazon Review Sentiment Analysis",
-          details: "This project is a Streamlit-based web application that analyzes Amazon product reviews and classifies them as Positive or Negative. It leverages a pre-trained LSTM (Long Short-Term Memory) deep learning model along with a tokenizer to process and clean user input text. The review is converted into sequences, padded for uniformity, and passed through the model for prediction. The output sentiment is displayed with color-coded highlights (green for Positive, red for Negative) to enhance readability. This application demonstrates the integration of natural language processing (NLP) with deep learning for real-time sentiment analysis in an interactive user interface.",
-          tech: ["Python", "Streamlit", "TensorFlow/Keras", "NLP", "Pickle", "Regex"],
+          details: "Streamlit app with pre-trained LSTM to classify Amazon reviews as Positive or Negative.",
+          tech: ["Python", "Streamlit", "TensorFlow/Keras", "NLP"],
           demo: "https://huggingface.co/spaces/geetha07-shree/Sentiment-Analysis"
         },
         {
-         title: "Voice Virtual Assistant with ElevenLabs",
-          details: "This project is about creating a Voice Virtual Assistant using the ElevenLabs Conversational AI API in Python. The assistant listens to the user’s voice through a microphone, processes it in real time, and responds back with natural-sounding speech. It’s designed to be context-aware and customizable.For example, it can know the user’s name, schedule, and provide helpful responses based on that information. The project demonstrates how modern APIs make it possible to handle the entire pipeline of speech recognition, language understanding, and text-to-speech with just one tool, which used to require multiple libraries in the past.",
-          tech: ["Python", "ElevenLabs API", "PyAudio", "python-dotenv", "NLP", "Real-time Voice Processing"],
+          title: "Voice Virtual Assistant with ElevenLabs",
+          details: "Python voice assistant using ElevenLabs API for real-time speech recognition and responses.",
+          tech: ["Python", "ElevenLabs API", "PyAudio"],
           github: "https://github.com/Geetha085/AI-Projects/tree/main/Voice%20Virtual%20Assistant"
         }
       ],
-
-     web: [
+      web: [
         {
           title: "QuickCheck",
-          details: "QuickCheck is a web-based vehicle management system that uses QR codes to store and access details like insurance, emission tests, and traffic fines. It connects RTOs, insurance companies, emission centers, traffic police, and vehicle owners through a centralized portal. Each vehicle gets a unique QR code card that can be scanned to instantly view or update its records. The system allows RTOs to register vehicles and manage data, insurance companies to update policy info, emission centers to log test results, traffic police to issue fines, and owners to track and manage their vehicle status—all in one place. Built with PHP, MySQL, and web technologies, it reduces manual work, improves transparency, and keeps all vehicle records up to date.",
-          tech: ["HTML", "CSS", "JavaScript", "PHP", "Apache Server","MySQL"]
+          details: "Vehicle management system using QR codes for insurance, emission, and fines. Built with PHP & MySQL.",
+          tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"]
         }
       ],
-
       data: [
         {
-          title: "Health Data Analytica",
-          details: "Analyzed OCD patient data using SQL for querying and cleaning, Excel for initial data exploration and preprocessing, and Power BI for creating interactive dashboards. Uncovered key trends in gender, ethnicity, diagnosis patterns, and common obsession/compulsion types, providing healthcare teams with actionable insights through clear visual storytelling and data-driven reports.",
-          tech: ["MS Excel", "PowerBI","SQL"],
+          title: "Health Data Analytics",
+          details: "OCD patient data analyzed with SQL, Excel, and Power BI to visualize patterns and insights.",
+          tech: ["Excel", "PowerBI","SQL"],
           github:"https://github.com/Geetha085/data-analytics-project/tree/main/Health%20Analytics"
         },
         {
-          title: "Retail Sales Analysis using SQL",
-          details: "Analyzed retail sales data using SQL to clean, explore, and answer key business questions. Identified customer behavior, top-selling categories, and monthly sales trends. Generated insights on sales performance by time of day (shift analysis), highlighted high-value transactions, and tracked unique customer engagement across product categories. This project helped uncover patterns in purchasing behavior and seasonal trends, supporting data-driven decision-making for retail strategy.",
-          tech: ["MySQL Workbench", "SQL"],
+          title: "Retail Sales Analysis",
+          details: "SQL analysis of retail sales, tracking trends, top categories, and customer behavior insights.",
+          tech: ["SQL"],
           github:"https://github.com/Geetha085/data-analytics-project/tree/main/Retail%20Sales%20Analysis"
         }
       ]
-
     };
 
     function showTab(tab, event) {
@@ -267,55 +218,36 @@
     }
 
     function showProjectDetails(tab, index) {
-  const project = projectData[tab][index];
-  document.getElementById('modal-title').textContent = project.title;
+      const project = projectData[tab][index];
+      document.getElementById('modal-title').textContent = project.title;
 
-  const modalContent = document.getElementById('modal-content');
-  
-  const techTags = project.tech
-    .map(tech => `<span class="bg-purple-600 px-3 py-1 rounded-full text-sm">${tech}</span>`)
-    .join('');
+      const techTags = project.tech
+        .map(tech => `<span class="bg-purple-600 px-3 py-1 rounded-full text-sm">${tech}</span>`)
+        .join('');
 
-  const githubLink = project.github
-    ? `<a href="${project.github}" target="_blank" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors">
-         View on GitHub
-       </a>`
-    : '';
+      const githubLink = project.github
+        ? `<a href="${project.github}" target="_blank" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors">GitHub</a>` : '';
 
-  const demoLink = project.demo
-    ? `<a href="${project.demo}" target="_blank" class="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg transition-colors">
-         Live Demo
-       </a>`
-    : '';
+      const demoLink = project.demo
+        ? `<a href="${project.demo}" target="_blank" class="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg transition-colors">Live Demo</a>` : '';
 
-  modalContent.innerHTML = `
-    <p class="text-gray-300 mb-4">${project.details}</p>
-    <div class="mb-4">
-      <h4 class="font-semibold mb-2">Technologies Used:</h4>
-      <div class="flex flex-wrap gap-2">${techTags}</div>
-    </div>
-    ${githubLink || demoLink ? `
-      <div class="flex space-x-4">
-        ${githubLink}
-        ${demoLink}
-      </div>` : ''}
-  `;
+      document.getElementById('modal-content').innerHTML = `
+        <p class="text-gray-300 mb-4">${project.details}</p>
+        <div class="mb-4">
+          <h4 class="font-semibold mb-2">Technologies Used:</h4>
+          <div class="flex flex-wrap gap-2">${techTags}</div>
+        </div>
+        ${githubLink || demoLink ? `<div class="flex space-x-4">${githubLink}${demoLink}</div>` : ''}
+      `;
 
-  document.getElementById('project-modal').classList.remove('hidden');
-  document.getElementById('project-modal').classList.add('flex');
-}
-
-
-    
-
+      document.getElementById('project-modal').classList.remove('hidden');
+      document.getElementById('project-modal').classList.add('flex');
+    }
 
     function closeModal() {
       document.getElementById('project-modal').classList.add('hidden');
       document.getElementById('project-modal').classList.remove('flex');
     }
-
-    
   </script>
-
 </body>
 </html>
