@@ -74,6 +74,30 @@
             </button>
           </div>
         </div>
+
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+         <img src="Images/SA.png" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Amazon Review Sentiment Analysis</h3>
+            <p class="text-gray-300 text-sm mb-4">A Streamlit app for sentiment analysis of Amazon reviews, classifying them as Positive or Negative using NLP techniques.</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('ai', 1)">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+         <img src="Images/VA.png" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Voice Virtual Assistant with ElevenLabs</h3>
+            <p class="text-gray-300 text-sm mb-4">A Python-based voice assistant built with ElevenLabs API that listens to user input, understands context, and responds in real time with natural-sounding speech.</p>
+            <button class="bg-purple-600 px-4 py-2 text-sm rounded-full hover:bg-purple-500 transition"
+              onclick="showProjectDetails('ai', 2)">
+              View Details
+            </button>
+          </div>
+        </div>
       </div>
 
        <!-- Web Development -->
@@ -195,11 +219,16 @@
           demo: "https://huggingface.co/spaces/geetha07-shree/Motivation-Generator"
         },
         {
-          title: "Content Generator",
-          description: "Auto-generates posts and marketing content.",
-          details: "Creates diverse social media and campaign material using multiple AI models. Supports scheduling and personalization.",
-          tech: ["Python", "Transformers", "React", "Node.js", "PostgreSQL"]
+          title: "Amazon Review Sentiment Analysis",
+          details: "This project is a Streamlit-based web application that analyzes Amazon product reviews and classifies them as Positive or Negative. It leverages a pre-trained LSTM (Long Short-Term Memory) deep learning model along with a tokenizer to process and clean user input text. The review is converted into sequences, padded for uniformity, and passed through the model for prediction. The output sentiment is displayed with color-coded highlights (green for Positive, red for Negative) to enhance readability. This application demonstrates the integration of natural language processing (NLP) with deep learning for real-time sentiment analysis in an interactive user interface.",
+          tech: ["Python", "Streamlit", "TensorFlow/Keras", "NLP", "Pickle", "Regex"],
+          demo: "https://huggingface.co/spaces/geetha07-shree/Sentiment-Analysis"
         }
+
+         title: "Voice Virtual Assistant with ElevenLabs",
+          details: "This project is about creating a Voice Virtual Assistant using the ElevenLabs Conversational AI API in Python. The assistant listens to the user’s voice through a microphone, processes it in real time, and responds back with natural-sounding speech. It’s designed to be context-aware and customizable—for example, it can know the user’s name, schedule, and provide helpful responses based on that information. The project demonstrates how modern APIs make it possible to handle the entire pipeline of speech recognition, language understanding, and text-to-speech with just one tool, which used to require multiple libraries in the past.",
+          tech: ["Python", "ElevenLabs API", "PyAudio", "python-dotenv", "NLP", "Real-time Voice Processing"],
+          github: "https://github.com/Geetha085/AI-Projects/tree/main/Voice%20Virtual%20Assistant"
       ],
 
      web: [
